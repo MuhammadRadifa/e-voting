@@ -2,14 +2,13 @@ import CandidateCard from "../components/CandidateCard"
 import Footer from "../components/Footer"
 import Header from "../components/Header"
 //import { Chart as ChartJS, registerables } from "chart.js"
-import hero_image from "../assets/hero.jpg"
+import hero_image from "../assets/hero.png"
 import candidate_1 from "../assets/candidate-1.png"
 import candidate_2 from "../assets/candidate-2.png"
+import { Link } from "react-router-dom"
 // import { Bar } from "react-chartjs-2"
 
 export default function LandingPage() {
-  //ChartJS.register(...registerables)
-
   const dataCandidate = [
     {
       name: "Chandra panca wibawa",
@@ -86,8 +85,8 @@ export default function LandingPage() {
         </div>
       </section> */}
       <section className="mb-10 px-5">
-        <a
-          href="/login"
+        <Link
+          to="/login"
           className="w-full mx-auto max-w-2xl bg-blue-100 p-4 flex items-center justify-center gap-4 rounded-md hover:scale-105 duration-200"
         >
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="w-6">
@@ -101,7 +100,7 @@ export default function LandingPage() {
             </g>
           </svg>
           <p className="font-semibold text-blue-800">Voting Di Sini</p>
-        </a>
+        </Link>
       </section>
       <Footer />
     </div>
